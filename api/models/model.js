@@ -1,10 +1,10 @@
-mongoose = require('mongoose')
-Schema = mongoose.Schema
+// mongoose = require('mongoose')
+let Schema = mongoose.Schema
 
 TaskSchema = new Schema({
   name: {
     type: String,
-    required: 'Kindly enter the name of the task'
+    required: 'Enter name of the task'
   },
   Created_date: {
     type: Date,

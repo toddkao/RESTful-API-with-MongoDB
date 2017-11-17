@@ -1,4 +1,4 @@
-module.exports = function(app) {
+module.exports = app => {
   todoList = require('../controllers/controller')
 
   // todoList Routes
@@ -12,7 +12,9 @@ module.exports = function(app) {
     .delete(todoList.delete_a_task)
 }
 
-middleware = function(req, res, next) {
-  console.log('test')
+middleware = (req, res, next) => {
+  console.log('url:', req.url)
+  console.log('method:', req.method)
+  console.log('body:', req.body)
   next()
 }
